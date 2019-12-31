@@ -1,0 +1,36 @@
+{
+	"name": "todo-plugin",
+	"version": "0.9.0",
+	"manifest_version": 2,
+	"description": "chrome plugin demo",
+	"background": {
+		"scripts": [
+			"jquery.js",
+			"background.js"
+		]
+
+	},
+
+
+	"content_scripts": [
+		{
+			"matches": [ "https://www.cnblogs.com/*" ],
+
+			"js": [ "jquery.js", "content.js" ]
+		}
+	],
+
+	"permissions": [
+		"http://www.cnblogs.com/",
+		"https://www.cnblogs.com/"
+	],
+	"web_accessible_resources": [
+		"icon.png",
+		"popup.js"
+	],
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_title": "Todo List",
+		"default_popup": "popup.html"
+	}
+}
