@@ -1,6 +1,7 @@
 function test() {
     alert("test");
 }
+
 //chrome.extension.onMessage.addListener(function (objRequest, _, sendResponse) {
 //    var strText = objRequest.txt;
 
